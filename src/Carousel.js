@@ -11,11 +11,59 @@ import "./carousel.css";
 
 const Example = () => {
   const slides = [
-    { key: "1", image: amhia, title: "Ask Me How I Am" },
-    { key: "2", image: tinos, title: "Tinos Place" },
-    { key: "3", image: perp, title: "Perpendicular Universe" },
-    { key: "4", image: landgirl, title: "Land Girl" },
-    { key: "5", image: blackout, title: "Blackout" },
+    {
+      key: "1",
+      image: amhia,
+      title: "Ask Me How I Am",
+      subtext: "Out Now!",
+      spotify:
+        "https://open.spotify.com/track/2JTDt6aiFRNpyjfZcG4E1A?si=b55436d8d1b4401f",
+      apple: "https://music.apple.com/us/album/landgirl-single/1751055555",
+      youtube: "https://www.youtube.com/watch?v=MAVev6WtbzI",
+    },
+    {
+      key: "2",
+      image: tinos,
+      title: "Tinos Place",
+      subtext: "Out Now!",
+      spotify:
+        "https://open.spotify.com/album/12OHLbRmsAq3MELvuCOKAi?si=BR-DUz5nRRm4zGVGm2MJ9Q",
+      apple: "https://music.apple.com/us/album/tinos-place-ep/1681880996",
+      youtube:
+        "https://www.youtube.com/playlist?list=OLAK5uy_kN63IuHbb3bWW7Znro63EvG2yVCPa3qOw",
+    },
+    {
+      key: "3",
+      image: perp,
+      title: "Perpendicular Universe",
+      subtext: "Out Now!",
+      spotify:
+        "https://open.spotify.com/track/0Cm6fuihWoj5PqymZdNL8S?si=7c3c03b1f92b4c52",
+      apple:
+        "https://music.apple.com/us/album/perpendicular-universe/1702150825?i=1702150826",
+      youtube: "https://youtu.be/twnLbe5kXD4?feature=shared",
+    },
+    {
+      key: "4",
+      image: landgirl,
+      title: "Land Girl",
+      subtext: "Music Video Out Now!",
+      spotify:
+        "https://open.spotify.com/track/2JTDt6aiFRNpyjfZcG4E1A?si=b55436d8d1b4401f",
+      apple: "https://music.apple.com/us/album/landgirl-single/1751055555",
+      youtube: "https://www.youtube.com/watch?v=MAVev6WtbzI",
+    },
+    {
+      key: "5",
+      image: blackout,
+      title: "Blackout",
+      subtext: "Music Video Out Now!",
+      spotify:
+        "https://open.spotify.com/track/5T4GN4EUfdCXMqfVjZeq8q?si=0ccdbbf623b44c70",
+      apple:
+        "https://music.apple.com/mu/album/blackout/1754735657?i=1754735658",
+      youtube: "https://youtu.be/HrEvzqUjLLc?feature=shared",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -67,15 +115,15 @@ const Example = () => {
         })}
       </div>
       <div className="flex flex-row gap-x-5">
-        <button>
+        <a href={slides[currentIndex].spotify}>
           <img src={spotify} className="h-[47px] w-[47px]" />
-        </button>
-        <button className="rounded-full bg-black">
+        </a>
+        <a className="rounded-full bg-black" href={slides[currentIndex].apple}>
           <img src={apple} className="h-[47px] w-[47px]" />
-        </button>
-        <button>
+        </a>
+        <a href={slides[currentIndex].youtube}>
           <img src={soundcloud} className="h-[47px] w-[47px]" />
-        </button>
+        </a>
       </div>
     </div>
   );
