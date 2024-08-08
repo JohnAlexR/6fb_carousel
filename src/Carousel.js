@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import amhia from "./assets/amhia.jpg";
+import amhia from "./assets/amhia.jpeg";
 import tinos from "./assets/tinos.png";
 import perp from "./assets/Perp.png";
 import landgirl from "./assets/LANDGIRL.jpg";
 import blackout from "./assets/Blackout.PNG";
 import apple from "./assets/applelogo.png";
 import spotify from "./assets/spotify.png";
-import soundcloud from "./assets/soundcloud.png";
 import youtube from "./assets/youtube.png";
 import "./carousel.css";
 import "./App.css";
@@ -26,7 +25,7 @@ const Example = () => {
     {
       key: "2",
       image: tinos,
-      title: `"Tino's Place"`,
+      title: `"Tino'amhias Place"`,
       subtext: "First EP!",
       spotify:
         "https://open.spotify.com/album/12OHLbRmsAq3MELvuCOKAi?si=BR-DUz5nRRm4zGVGm2MJ9Q",
