@@ -7,7 +7,9 @@ import blackout from "./assets/Blackout.PNG";
 import apple from "./assets/applelogo.png";
 import spotify from "./assets/spotify.png";
 import soundcloud from "./assets/soundcloud.png";
+import youtube from "./assets/youtube.png";
 import "./carousel.css";
+import "./App.css";
 
 const Example = () => {
   const slides = [
@@ -15,7 +17,7 @@ const Example = () => {
       key: "1",
       image: amhia,
       title: "Ask Me How I Am",
-      subtext: "Out Now!",
+      subtext: "New Album!",
       spotify:
         "https://open.spotify.com/track/2JTDt6aiFRNpyjfZcG4E1A?si=b55436d8d1b4401f",
       apple: "https://music.apple.com/us/album/landgirl-single/1751055555",
@@ -25,7 +27,7 @@ const Example = () => {
       key: "2",
       image: tinos,
       title: "Tinos Place",
-      subtext: "Out Now!",
+      subtext: "First EP!",
       spotify:
         "https://open.spotify.com/album/12OHLbRmsAq3MELvuCOKAi?si=BR-DUz5nRRm4zGVGm2MJ9Q",
       apple: "https://music.apple.com/us/album/tinos-place-ep/1681880996",
@@ -81,8 +83,13 @@ const Example = () => {
 
   return (
     <div className="carousel">
-      <div className="">
-        <p className="font-rock-salt text-xl">{slides[currentIndex].title}</p>
+      <div className="flex flex-col">
+        <p className="font-rock-salt text-[#08A775] media-subtext">
+          {slides[currentIndex].subtext}
+        </p>
+        <p className="text-[50px] madena media-text">
+          {slides[currentIndex].title}
+        </p>
       </div>
       <div className="carousel-slides">
         {getVisibleSlides().map((slide, index) => {
@@ -114,7 +121,7 @@ const Example = () => {
           );
         })}
       </div>
-      <div className="flex flex-row gap-x-5">
+      <div className="flex flex-row gap-x-5 mt-5">
         <a href={slides[currentIndex].spotify}>
           <img src={spotify} className="h-[47px] w-[47px]" />
         </a>
@@ -122,7 +129,7 @@ const Example = () => {
           <img src={apple} className="h-[47px] w-[47px]" />
         </a>
         <a href={slides[currentIndex].youtube}>
-          <img src={soundcloud} className="h-[47px] w-[47px]" />
+          <img src={youtube} className="h-[47px] w-[47px]" />
         </a>
       </div>
     </div>
