@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import amhia from "./amhia.jpg";
-import tinos from "./tinos.png";
-import perp from "./Perp.png";
-import landgirl from "./LANDGIRL.jpg";
-import blackout from "./Blackout.PNG";
-import apple from "./applelogo.png";
-import spotify from "./spotify.png";
-import soundcloud from "./soundcloud.png";
+import amhia from "./assets/amhia.jpg";
+import tinos from "./assets/tinos.png";
+import perp from "./assets/Perp.png";
+import landgirl from "./assets/LANDGIRL.jpg";
+import blackout from "./assets/Blackout.PNG";
+import apple from "./assets/applelogo.png";
+import spotify from "./assets/spotify.png";
+import soundcloud from "./assets/soundcloud.png";
 import "./carousel.css";
 
 const Example = () => {
