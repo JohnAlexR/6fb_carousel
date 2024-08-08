@@ -56,3 +56,32 @@
   margin-top: 10px;
   font-family: "Rock Salt", cursive;
 }
+
+@media (max-width: 768px) {
+  .carousel-slide {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 300px;
+    width: 300px;
+  }
+
+  .carousel-slide {
+    width: 120px;
+  }
+
+  .carousel-slide.active {
+    transform: scale(1.1);
+  }
+
+  .carousel-slide.prev {
+    transform: translateX(80%) scale(0.7);
+  }
+
+  .carousel-slide.next {
+    transform: translateX(-80%) scale(0.7);
+  }
+}
