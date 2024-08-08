@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App flex flex-col justify-center items-center">
-      <p className="font-mono text-green-700">coming soon</p>
+      {/* <p className="font-mono text-green-700">coming soon</p>
       <p className="font-rock-salt">{data[1].title}</p>
       <div className="flex flex-row items-center">
         <img
@@ -48,8 +48,10 @@ function App() {
           className=" w-[310px] h-[310px] z-10 rounded-2xl"
           alt="perpendicular universe"
         />
+      </div> */}
+      <div className="flex items-center mt-20 py-[100px]">
+        <Example />
       </div>
-      <Example />
     </div>
   );
 }

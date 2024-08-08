@@ -1,67 +1,64 @@
-import React, { Component } from "react";
-import Carousel from "react-spring-3d-carousel";
-import { config } from "react-spring";
+import React, { useState } from "react";
 import amhia from "./amhia.jpg";
 import tinos from "./tinos.png";
 import perp from "./Perp.png";
 import landgirl from "./LANDGIRL.jpg";
 import blackout from "./Blackout.PNG";
+import "./carousel.css";
 
-export default class Example extends Component {
-  state = {
-    goToSlide: 0,
-    offsetRadius: 2,
-    showNavigation: true,
-    config: config.gentle,
+const Example = () => {
+  const slides = [
+    { key: "1", image: amhia, title: "Ask Me How I Am" },
+    { key: "2", image: tinos, title: "Tinos" },
+    { key: "3", image: perp, title: "Perp" },
+    { key: "4", image: landgirl, title: "Land Girl" },
+    { key: "5", image: blackout, title: "Blackout" },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const selectSlide = (index) => {
+    setCurrentIndex(index);
   };
 
-  slides = [
-    {
-      key: "1",
-      content: (
-        <div className="">
-          <p className="font-rock-salt">Ask Me How I Am</p>
-          <img src={amhia} alt="Ask Me How I Am" />
-        </div>
-      ),
-    },
-    {
-      key: "2",
-      content: <img src={perp} alt="2" />,
-    },
-    {
-      key: "3",
-      content: <img src={tinos} alt="3" />,
-    },
-    {
-      key: "4",
-      content: <img src={landgirl} alt="4" />,
-    },
-    {
-      key: "5",
-      content: <img src={blackout} alt="5" />,
-    },
-  ].map((slide, index) => {
-    return { ...slide, onClick: () => this.setState({ goToSlide: index }) };
-  });
+  const getVisibleSlides = () => {
+    const prevIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    const nextIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
 
-  onChangeInput = (e) => {
-    this.setState({
-      [e.target.name]: parseInt(e.target.value, 10) || 0,
-    });
+    return [slides[prevIndex], slides[currentIndex], slides[nextIndex]];
   };
 
-  render() {
-    return (
-      <div style={{ width: "80%", height: "410px", margin: "0 auto" }}>
-        <Carousel
-          slides={this.slides}
-          goToSlide={this.state.goToSlide}
-          offsetRadius={this.state.offsetRadius}
-          showNavigation={this.state.showNavigation}
-          animationConfig={this.state.config}
-        />
+  return (
+    <div className="carousel">
+      <div className="carousel-slides">
+        {getVisibleSlides().map((slide, index) => {
+          let className = "carousel-slide";
+          if (index === 1) {
+            className += " active";
+          } else if (index === 0) {
+            className += " prev";
+          } else {
+            className += " next";
+          }
+
+          return (
+            <div
+              key={slide.key}
+              className={className}
+              onClick={() =>
+                selectSlide(
+                  (currentIndex + index - 1 + slides.length) % slides.length
+                )
+              }
+            >
+              <img src={slide.image} alt={slide.title} />
+              <p className="carousel-title">{slide.title}</p>
+            </div>
+          );
+        })}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Example;
