@@ -16,7 +16,7 @@ const Example = () => {
     {
       key: "1",
       image: amhia,
-      title: "Ask Me How I Am",
+      title: '"Ask Me How I Am"',
       subtext: "New Album!",
       spotify:
         "https://open.spotify.com/track/2JTDt6aiFRNpyjfZcG4E1A?si=b55436d8d1b4401f",
@@ -26,7 +26,7 @@ const Example = () => {
     {
       key: "2",
       image: tinos,
-      title: "Tinos Place",
+      title: `"Tino's Place"`,
       subtext: "First EP!",
       spotify:
         "https://open.spotify.com/album/12OHLbRmsAq3MELvuCOKAi?si=BR-DUz5nRRm4zGVGm2MJ9Q",
@@ -37,7 +37,7 @@ const Example = () => {
     {
       key: "3",
       image: perp,
-      title: "Perpendicular Universe",
+      title: '"Perpendicular Universe"',
       subtext: "Out Now!",
       spotify:
         "https://open.spotify.com/track/0Cm6fuihWoj5PqymZdNL8S?si=7c3c03b1f92b4c52",
@@ -48,7 +48,7 @@ const Example = () => {
     {
       key: "4",
       image: landgirl,
-      title: "Land Girl",
+      title: '"Landgirl"',
       subtext: "Music Video Out Now!",
       spotify:
         "https://open.spotify.com/track/2JTDt6aiFRNpyjfZcG4E1A?si=b55436d8d1b4401f",
@@ -58,7 +58,7 @@ const Example = () => {
     {
       key: "5",
       image: blackout,
-      title: "Blackout",
+      title: '"Blackout"',
       subtext: "Music Video Out Now!",
       spotify:
         "https://open.spotify.com/track/5T4GN4EUfdCXMqfVjZeq8q?si=0ccdbbf623b44c70",
