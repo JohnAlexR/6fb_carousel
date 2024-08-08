@@ -18,7 +18,7 @@
 }
 
 .carousel-slide {
-  opacity: 1;
+  opacity: 0;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   cursor: pointer;
   text-align: center;
@@ -33,17 +33,19 @@
 }
 
 .carousel-slide.active {
-  transform: scale(1.2);
   opacity: 1;
+  transform: scale(1.2);
   z-index: 3;
 }
 
 .carousel-slide.prev {
-  transform: translateX(-100%) scale(0.8);
+  opacity: 0.8;
+  transform: translateX(-80%) scale(0.8);
 }
 
 .carousel-slide.next {
-  transform: translateX(100%) scale(0.8);
+  opacity: 0.8;
+  transform: translateX(80%) scale(0.8);
 }
 
 .carousel-title {
