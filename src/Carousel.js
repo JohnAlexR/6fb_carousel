@@ -3,7 +3,7 @@ import amhia from "./assets/amhia.jpeg";
 import tinos from "./assets/tinos.png";
 import perp from "./assets/Perp.png";
 import landgirl from "./assets/LANDGIRL.jpg";
-import blackout from "./assets/Blackout.PNG";
+import blackout from "./assets/Blackout.png";
 import apple from "./assets/applelogo.png";
 import spotify from "./assets/spotify.png";
 import youtube from "./assets/youtube.png";
@@ -114,7 +114,7 @@ const Example = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="rounded-2xl h-[431px] w-[431px]"
+                className="rounded-2xl h-[431px] w-[431px] image"
               />
             </div>
           );
@@ -122,13 +122,13 @@ const Example = () => {
       </div>
       <div className="flex flex-row gap-x-5 mt-5">
         <a href={slides[currentIndex].spotify}>
-          <img src={spotify} className="h-[47px] w-[47px]" />
+          <img src={spotify} className="h-[47px] w-[47px] logo" />
         </a>
         <a className="rounded-full bg-black" href={slides[currentIndex].apple}>
-          <img src={apple} className="h-[47px] w-[47px]" />
+          <img src={apple} className="h-[47px] w-[47px] logo" />
         </a>
         <a href={slides[currentIndex].youtube}>
-          <img src={youtube} className="h-[47px] w-[47px]" />
+          <img src={youtube} className="h-[47px] w-[47px] logo" />
         </a>
       </div>
     </div>

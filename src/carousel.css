@@ -120,3 +120,15 @@
 .madena {
   font-family: "madena";
 }
+
+.logo {
+  height: 47px;
+  width: 47px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
