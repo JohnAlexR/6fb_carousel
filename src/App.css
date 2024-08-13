@@ -41,3 +41,8 @@
   font-family: "Madena";
   src: url(./fonts/madena/RL-Madena.woff) format("woff");
 }
+
+@font-face {
+  font-family: "Rock Salt";
+  src: url(./fonts/Rock_Salt/RockSalt-Regular.ttf) format("ttf");
+}

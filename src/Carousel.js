@@ -18,9 +18,10 @@ const Example = () => {
       title: '"Ask Me How I Am"',
       subtext: "New Album!",
       spotify:
-        "https://open.spotify.com/track/2JTDt6aiFRNpyjfZcG4E1A?si=b55436d8d1b4401f",
-      apple: "https://music.apple.com/us/album/landgirl-single/1751055555",
-      youtube: "https://www.youtube.com/watch?v=MAVev6WtbzI",
+        "https://open.spotify.com/album/4Lpg0ThC70V4mp7kcsCGGx?si=_mEoyhaiRVOhEkTrRSBXqQ",
+      apple: "https://music.apple.com/mu/album/ask-me-how-i-am/1757713613",
+      youtube:
+        "https://www.youtube.com/watch?v=vf1_MZaWAPs&list=OLAK5uy_k3hz6swzCW4Zpm32L699j206l9Rp3lAOg",
     },
     {
       key: "2",
@@ -83,12 +84,10 @@ const Example = () => {
   return (
     <div className="carousel">
       <div className="flex flex-col">
-        <p className="font-rock-salt text-[#08A775] media-subtext">
+        <p className="font-rock-salt subtext media-subtext">
           {slides[currentIndex].subtext}
         </p>
-        <p className="text-[50px] madena media-text">
-          {slides[currentIndex].title}
-        </p>
+        <p className="title madena media-text">{slides[currentIndex].title}</p>
       </div>
       <div className="carousel-slides">
         {getVisibleSlides().map((slide, index) => {
@@ -120,7 +119,7 @@ const Example = () => {
           );
         })}
       </div>
-      <div className="flex flex-row gap-x-5 mt-5">
+      <div className="image-div">
         <a href={slides[currentIndex].spotify}>
           <img src={spotify} className="h-[47px] w-[47px] logo" />
         </a>
