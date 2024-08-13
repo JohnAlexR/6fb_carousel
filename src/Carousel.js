@@ -25,7 +25,7 @@ const Example = () => {
     {
       key: "2",
       image: tinos,
-      title: `"Tino'amhias Place"`,
+      title: `"Tino's Place"`,
       subtext: "First EP!",
       spotify:
         "https://open.spotify.com/album/12OHLbRmsAq3MELvuCOKAi?si=BR-DUz5nRRm4zGVGm2MJ9Q",
