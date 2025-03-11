@@ -7,6 +7,7 @@ import blackout from "./assets/Blackout.png";
 import apple from "./assets/applelogo.png";
 import spotify from "./assets/spotify.png";
 import youtube from "./assets/youtube.png";
+import audiotree from "./assets/audiotree.jpeg";
 import "./carousel.css";
 import "./App.css";
 
@@ -16,7 +17,7 @@ const Example = () => {
       key: "1",
       image: amhia,
       title: '"Ask Me How I Am"',
-      subtext: "New Album!",
+      subtext: "Debut Album!",
       spotify:
         "https://open.spotify.com/album/4Lpg0ThC70V4mp7kcsCGGx?si=_mEoyhaiRVOhEkTrRSBXqQ",
       apple: "https://music.apple.com/mu/album/ask-me-how-i-am/1757713613",
@@ -38,7 +39,7 @@ const Example = () => {
       key: "3",
       image: perp,
       title: '"Perpendicular Universe"',
-      subtext: "Out Now!",
+      subtext: "Backwards moving",
       spotify:
         "https://open.spotify.com/track/0Cm6fuihWoj5PqymZdNL8S?si=7c3c03b1f92b4c52",
       apple:
@@ -57,14 +58,14 @@ const Example = () => {
     },
     {
       key: "5",
-      image: blackout,
-      title: '"Blackout"',
-      subtext: "Music Video Out Now!",
+      image: audiotree,
+      title: '"Audiotree Live"',
+      subtext: "Live Session Out Now!",
       spotify:
-        "https://open.spotify.com/track/5T4GN4EUfdCXMqfVjZeq8q?si=0ccdbbf623b44c70",
+        "https://open.spotify.com/album/4aCg5olMrEUz534E258fl3?si=YhSTzDtSSteFdaVxodvOMQ",
       apple:
-        "https://music.apple.com/mu/album/blackout/1754735657?i=1754735658",
-      youtube: "https://youtu.be/HrEvzqUjLLc?feature=shared",
+        "https://music.apple.com/us/album/six-foot-blonde-audiotree-live-ep/1798266692",
+      youtube: "https://youtu.be/WhhfFuIuY0Q?si=0F_n9IVAduj_QgRn",
     },
   ];
 
